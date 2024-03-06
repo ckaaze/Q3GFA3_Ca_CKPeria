@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var randomnumber = RandomNumber();
+        var hundreds = Hundreds();
+        var tens = Tens();
+        var ones = Ones();
+        var date = new Date();
+
+        function RandomNumber (){
+            return Math.floor(Math.random()*1001);
+        }
+        document.write("Radomly Generated Number: "+randomnumber +"<br>");
+
+        function Hundreds(){
+            return Math.floor((randomnumber/100));
+        }
+
+        function Tens(){
+            return Math.floor((randomnumber%100)/10);
+        }
+
+        function Ones(){
+            return Math.floor(randomnumber%10);
+        }
+        document.write("Breakdown: " + hundreds + "00, " + tens + "0, " + ones +"<br>");
+        document.write(date)
+
+    </script>
+</body>
+</html>
